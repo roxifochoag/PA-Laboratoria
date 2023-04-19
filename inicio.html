@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="inicio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+  
+<body>
+  <header>
+      <h1>
+ <script>
+        const usuarioGuardado = localStorage.getItem("username");
+        if (usuarioGuardado) {
+        const parrafo = document.createElement("p");
+        parrafo.textContent = `Hola  ${usuarioGuardado} bienvenido al juego de trivia, vamos a empezar `;
+        document.body.appendChild(parrafo);
+                              } else {
+        const parrafo = document.createElement("p");
+              parrafo.textContent = "No se ha presentado";
+              document.body.appendChild(parrafo);
+                              }
+  </script>   </h1>
+
+
+    <h3> Seleccione la trivia donde desea ingresar </h3>
+  </header>
+
+  <label>
+    <form method="get" action="animales.html">
+      <br> <input class="btn" type="submit" value="Pruebe su conocimiento de animales" /> <br>
+    </form>
+  </label>
+
+  <label>
+    <form method="get" action="arte.html">
+      <br> <input class="btn" type="submit" value="Descubra cuanto sabe sobre el arte del mundo" /> </br>
+    </form>
+  </label>
+
+  <label>
+    <form method="get" action="geografia.html">
+      <br> <input class="btn" type="submit" value="Valide lo que sabe de geografía" /> </br>
+    </form>
+  </label>
+
+  <label>
+    <form method="get" action="gastronomia.html">
+      <br> <input class="btn" type="submit" value="Conozca cuanto sabe de gastronomía" /> </br>
+    </form>
+  </label>
+
+</body>
+   <a href="bienvenido.html">Volvamos a ingresar tu usuario</a>
+</form>
+
+</html>

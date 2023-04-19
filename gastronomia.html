@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title> Game </title>
+</head>
+
+<body>
+  <header>
+    <h1>
+ <script>
+        const usuarioGuardado = localStorage.getItem("username");
+        if (usuarioGuardado) {
+        const parrafo = document.createElement("p");
+        parrafo.textContent = `Empezamos con el juego  ${usuarioGuardado}`;
+        document.body.appendChild(parrafo);
+                              } else {
+        const parrafo = document.createElement("p");
+              parrafo.textContent = "No se ha presentado";
+              document.body.appendChild(parrafo);
+                              }
+  </script>   </h1>
+    <h2> CULTURA GENERAL : Sección gastronomía </h2>
+  </header>
+
+  <form id="trivia">
+    <div class="container">
+      
+  <button onclick="iniciarCronometro()">Comenzar</button>
+  <p id="cronometro">00:15</p>
+      <section>
+        <p>1. ¿Cuándo se celebra el Día Nacional del Cebiche?</p>
+        <input type="radio" name="pregunta1" onclick="validar()" value="a">a. 28 de Junio</br>
+        <!--Respuesta correcta-->
+        <input type="radio" name="pregunta1" onclick="validar()" value="b">b. 28 de Julio<br>
+        <input type="radio" name="pregunta1" onclick="validar()" value="c">c. 28 de Agosto<br>
+        <br>
+        <p>2. ¿Qué postre es conocido como el "Clásico Limeño"? </p>
+        <input type="radio" name="pregunta2" onclick="validar()" value="a">a. Sanguito<br>
+        <input type="radio" name="pregunta2" onclick="validar()" value="b">b. Arroz con leche y Mazamorra<br>
+        <!--Respuesta correcta-->
+        <input type="radio" name="pregunta2" onclick="validar()" value="c">c. Suspiro a la Limeña<br>
+        <br>
+        <p>3. ¿Cuál es el plato bandera de la ciudad de Arequipa?</p>
+        <input type="radio" name="pregunta3" onclick="validar()" value="a">a. Rocoto arequipeño<br>
+        <!--Respuesta correcta-->
+        <input type="radio" name="pregunta3" onclick="validar()" value="b">b. Causa limeña<br>
+        <input type="radio" name="pregunta3" onclick="validar()" value="c">c. Queso helado<br>
+        <br>
+      </section>
+       <a href="inicio.html">Volvamos a jugar</a>
+  </form>
+  <h2>
+    <button onclick="validar()">Regresar</button>
+  </h2>
+  <script src="script.js"></script>
+  </div>
+
+</body>
+
+</html>
